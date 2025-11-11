@@ -68,10 +68,10 @@ int main()
         }
     }
 
-    // just prints all the tokens for now
-    for (const auto &t : tokens)
+    for (const auto &current : tokens)
     {
-        std::cout << t << std::endl; // maybe soon something like  < lexicalAnalyzer(t); >
+        std::cout << "\"" << current << "\"" << " = " << "token" << std::endl; // Replace "token" with function call to
+                                                                               // lexical analyzer function
     }
 
     return 0;
