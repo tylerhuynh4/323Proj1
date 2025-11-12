@@ -76,7 +76,7 @@ int main()
 
     for (const auto &current : tokens)
     {
-        std::cout << t << std::endl; // maybe soon something like  < lexicalAnalyzer(t); >
+        std::cout << "\"" << current << "\" = " << classifyToken(current) << std::endl; // maybe soon something like  < lexicalAnalyzer(t); >
     }
 
     return 0;
