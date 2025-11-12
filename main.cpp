@@ -3,6 +3,8 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include "tokens.h"
+#include <cctype>
 
 int main()
 {
@@ -22,6 +24,10 @@ int main()
 
     while (std::getline(inputfile, line))
     { // while there's still a line to read from the file
+
+        if (line.empty()) {
+            continue;
+        }
 
         std::stringstream ss(line);
         char c; // c will hold each character at a time
@@ -68,10 +74,10 @@ int main()
         }
     }
 
-    // just prints all the tokens for now
-    for (const auto &t : tokens)
+    for (const auto &current : tokens)
     {
-        std::cout << t << std::endl; // maybe soon something like  < lexicalAnalyzer(t); >
+        std::cout << "\"" << current << "\"" << " = " << classifyToken(current) << std::endl;
+                                                                                              
     }
 
     return 0;
